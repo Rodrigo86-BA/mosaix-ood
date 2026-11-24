@@ -1,0 +1,23 @@
+
+\begin{table}[t]\centering\caption{Cross-entropy versus label smoothing, AUROC on identical splits. Each cell is the mean over the OOD sets of that regime (two near, three far), with the standard deviation across them as subscript. The LS cell is \textcolor{lsup}{\textbf{blue}} where LS surpasses CE and \textcolor{lsdown}{red} where LS is worse than CE. Backbones: ResNet-50 (IN-1K), ResNet-18 (IN-200, C-100). All three benchmarks are measured on the full evaluation split.}\label{tab:regeffect}
+\footnotesize\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{llcccc}
+\toprule
+ & & \multicolumn{2}{c}{near-OOD} & \multicolumn{2}{c}{far-OOD} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+bench. & score & CE & LS & CE & LS \\
+\midrule
+\multirow{3}{*}{IN-1K} & MLS & $.745_{\pm.04}$ & \textcolor{lsdown}{$.731_{\pm.04}$} & $.850_{\pm.03}$ & \textcolor{lsdown}{$.782_{\pm.03}$} \\
+ & Energy & $.739_{\pm.04}$ & \textcolor{lsdown}{$.702_{\pm.02}$} & $.846_{\pm.03}$ & \textcolor{lsdown}{$.725_{\pm.03}$} \\
+\addlinespace[2pt]\cdashline{2-6}\addlinespace[2pt]  & Maha & $.564_{\pm.09}$ & \textcolor{lsup}{$\mathbf{.685_{\pm.09}}$} & $.797_{\pm.10}$ & \textcolor{lsup}{$\mathbf{.911_{\pm.04}}$} \\
+\midrule
+\multirow{3}{*}{IN-200} & MLS & $.811_{\pm.02}$ & \textcolor{lsdown}{$.802_{\pm.02}$} & $.878_{\pm.02}$ & \textcolor{lsdown}{$.826_{\pm.02}$} \\
+ & Energy & $.808_{\pm.02}$ & \textcolor{lsdown}{$.787_{\pm.02}$} & $.876_{\pm.01}$ & \textcolor{lsdown}{$.791_{\pm.02}$} \\
+\addlinespace[2pt]\cdashline{2-6}\addlinespace[2pt]  & Maha & $.590_{\pm.03}$ & \textcolor{lsup}{$\mathbf{.744_{\pm.02}}$} & $.695_{\pm.08}$ & \textcolor{lsup}{$\mathbf{.875_{\pm.04}}$} \\
+\midrule
+\multirow{3}{*}{C-100} & MLS & $.804_{\pm.00}$ & \textcolor{lsdown}{$.799_{\pm.01}$} & $.810_{\pm.04}$ & \textcolor{lsdown}{$.809_{\pm.01}$} \\
+ & Energy & $.804_{\pm.00}$ & \textcolor{lsdown}{$.799_{\pm.00}$} & $.812_{\pm.05}$ & \textcolor{lsdown}{$.812_{\pm.02}$} \\
+\addlinespace[2pt]\cdashline{2-6}\addlinespace[2pt]  & Maha & $.612_{\pm.04}$ & \textcolor{lsup}{$\mathbf{.757_{\pm.03}}$} & $.720_{\pm.04}$ & \textcolor{lsup}{$\mathbf{.836_{\pm.04}}$} \\
+\bottomrule
+\end{tabular}
+\end{table}

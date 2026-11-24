@@ -1,0 +1,7 @@
+condition,top-left,top-right,bottom-left,bottom-right,mean of 4 s,s of mean map
+"ResNet-50, 224 tiles, 448 mosaic",0.911320,0.899853,0.909816,0.898616,0.917848,0.917253
+"ResNet-50, 112 tiles, 224 mosaic",0.766881,0.706228,0.669662,0.630279,0.730087,0.724025
+"ViT-B/16, shrink (112 tiles, 224 mosaic)",0.599568,0.595239,0.608212,0.591082,0.617361,0.603412
+"ViT-B/16, interpolate (224 tiles, embedding 14 to 28)",0.668322,0.668560,0.668200,0.674793,0.693958,0.681874
+"ViT-B/16, extrapolate, periodic",0.637779,0.637779,0.637779,0.637779,0.637779,0.637779
+"ViT-B/16, extrapolate, smooth",0.653131,0.634598,0.610579,0.596634,0.636470,0.633469

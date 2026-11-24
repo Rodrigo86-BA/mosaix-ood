@@ -1,0 +1,42 @@
+Producing script: scripts/170_slides_knn.py
+Dados: results/knn_vs_prototype/169_per_sample_20260915-0122.csv
+
+O que os slides medem, e por que:
+  A politica kNN escolhe as referencias mais proximas DA QUERY.
+  Para uma query OOD isso significa escolher membros atipicos da
+  classe prevista. A referencia deixa de ser uma barra fixa e passa
+  a acompanhar a query, e a razao s = Eq/(Eq+Er) cancela parte da
+  queda que deveria sinalizar OOD.
+
+Arquivos de saida:
+  170_s1_exemplo.pdf/.png  uma query ID e uma far-OOD, cada uma nas
+     duas politicas, com CAM sobreposto e s anotado
+  170_s2_medida.pdf/.png   quatro paineis: E_ref, tipicidade das
+     referencias, correlacao Eq x Er, e AUROC
+  170_slides_knn.txt       este companion
+
+Resumo numerico:
+  lendo 169_per_sample_20260915-0122.csv | 12000 linhas
+    slide1 in-distribution    prototype  s=0.371
+    slide1 in-distribution    knn        s=0.371
+    slide1 far-OOD            prototype  s=0.005
+    slide1 far-OOD            knn        s=0.698
+  
+  valores do slide 2
+    E_ref              prototype  ID +8.745  near +9.199  far +8.833
+    E_ref              knn        ID +7.283  near +7.058  far +5.397
+    cos(ref,centroid)  prototype  ID +0.863  near +0.867  far +0.858
+    cos(ref,centroid)  knn        ID +0.763  near +0.723  far +0.636
+    corr(Eq,Eref)      prototype  ID -0.010  near -0.097  far -0.126
+    corr(Eq,Eref)      knn        ID +0.476  near +0.337  far +0.168
+
+Guia de interpretacao:
+  1. Painel 1: se E_ref cai de ID para far no kNN e nao no
+     prototipo, a barra esta' se movendo junto com a query.
+  2. Painel 2: cos(ref, centroide) menor no kNN para queries far
+     mostra a selecao saindo do centro da classe.
+  3. Painel 3: correlacao positiva no kNN e' o cancelamento na
+     razao. No prototipo ela fica perto de zero ou negativa.
+  4. Painel 4: a conta final em AUROC.
+  5. No slide 1, o valor de s sobe no kNN para a query OOD e
+     muda pouco para a ID. Esse e' o efeito inteiro num exemplo.

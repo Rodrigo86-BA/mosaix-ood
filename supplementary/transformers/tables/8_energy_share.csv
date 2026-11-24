@@ -1,0 +1,11 @@
+condition,queries,"query tile, query top-left","query tile, query top-right","query tile, query bottom-left","query tile, query bottom-right","top-left tile, query top-right","top-left tile, query bottom-left","top-left tile, query bottom-right"
+"ResNet-50, 224 tiles, 448 mosaic",ID,0.179202,0.188248,0.177088,0.182898,0.272701,0.270168,0.265200
+"ResNet-50, 224 tiles, 448 mosaic",far-OOD,0.027782,0.036925,0.029236,0.037759,0.327862,0.315307,0.298693
+"ViT-B/16, shrink (112 tiles, 224 mosaic)",ID,0.224327,0.231099,0.228005,0.230904,0.263013,0.257972,0.257827
+"ViT-B/16, shrink (112 tiles, 224 mosaic)",far-OOD,0.191007,0.194274,0.189087,0.197350,0.265174,0.275219,0.268264
+"ViT-B/16, interpolate (224 tiles, embedding 14 to 28)",ID,0.204664,0.205582,0.216175,0.210863,0.262456,0.266425,0.264529
+"ViT-B/16, interpolate (224 tiles, embedding 14 to 28)",far-OOD,0.146352,0.147272,0.153261,0.147690,0.278467,0.288676,0.285465
+"ViT-B/16, extrapolate, periodic",ID,0.213635,0.213635,0.213635,0.213635,0.266526,0.266526,0.266526
+"ViT-B/16, extrapolate, periodic",far-OOD,0.173427,0.173427,0.173427,0.173427,0.284648,0.284648,0.284648
+"ViT-B/16, extrapolate, smooth",ID,0.231456,0.213047,0.200872,0.181924,0.295458,0.298987,0.299939
+"ViT-B/16, extrapolate, smooth",far-OOD,0.178492,0.170865,0.168774,0.157143,0.306385,0.307158,0.303217

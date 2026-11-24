@@ -1,0 +1,16 @@
+condition,queries,top-right,bottom-left,bottom-right
+"ResNet-50, 224 tiles, 448 mosaic",ID,0.922015,0.917052,0.853498
+"ResNet-50, 224 tiles, 448 mosaic",near-OOD,0.882114,0.874466,0.793553
+"ResNet-50, 224 tiles, 448 mosaic",far-OOD,0.635515,0.658733,0.445851
+"ViT-B/16, shrink (112 tiles, 224 mosaic)",ID,0.804423,0.706573,0.693384
+"ViT-B/16, shrink (112 tiles, 224 mosaic)",near-OOD,0.765919,0.671753,0.637544
+"ViT-B/16, shrink (112 tiles, 224 mosaic)",far-OOD,0.694703,0.609013,0.558991
+"ViT-B/16, interpolate (224 tiles, embedding 14 to 28)",ID,0.864172,0.796874,0.770285
+"ViT-B/16, interpolate (224 tiles, embedding 14 to 28)",near-OOD,0.824588,0.770009,0.728397
+"ViT-B/16, interpolate (224 tiles, embedding 14 to 28)",far-OOD,0.768688,0.715752,0.660802
+"ViT-B/16, extrapolate, periodic",ID,1.000000,1.000000,1.000000
+"ViT-B/16, extrapolate, periodic",near-OOD,1.000000,1.000000,1.000000
+"ViT-B/16, extrapolate, periodic",far-OOD,1.000000,1.000000,1.000000
+"ViT-B/16, extrapolate, smooth",ID,0.716849,0.632374,0.501336
+"ViT-B/16, extrapolate, smooth",near-OOD,0.690867,0.607985,0.477768
+"ViT-B/16, extrapolate, smooth",far-OOD,0.682673,0.635350,0.495583

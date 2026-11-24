@@ -1,0 +1,29 @@
+# machine-local paths - the contract lives in .env.example
+.env
+configs/paths.yaml
+
+# LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
+paper/main.pdf
+
+# python
+__pycache__/
+*.pyc
+
+# editors / os
+.DS_Store
+*.swp
+
+# link to the source repository (machine-local)
+external_xai_ood

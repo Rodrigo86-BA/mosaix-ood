@@ -1,0 +1,45 @@
+# RENDERED from configs/paths.yaml.template by configs/render_paths.py.
+# Do not edit the rendered configs/paths.yaml - edit .env and re-render.
+# Same key layout as external_xai_ood/configs/paths.yaml, which is what
+# src/config.py and scripts/07 read.
+
+data_root: ${DATA_ROOT}
+
+ood_sets:
+  ssb_hard:    {path: ${OOD_SSB_HARD}, split: near}
+  ninco:       {path: ${OOD_NINCO}, split: near}
+  inaturalist: {path: ${OOD_INATURALIST}, split: far}
+  openimage_o: {path: ${OOD_OPENIMAGE_O}, split: far}
+  textures:    {path: ${OOD_TEXTURES}, split: far}
+
+imagenet1k:
+  train: ${IN1K_TRAIN}
+  val:   ${IN1K_VAL}
+
+backbones:
+  ce:    {ckpt: ${CE_CKPT}}
+  ls:    {ckpt: ${LS_CKPT}}
+  mixup: {ckpt: ${MIXUP_CKPT}}
+
+feature_dirs:
+  ce:    ${CE_FEATDIR}
+  ls:    ${LS_FEATDIR}
+  mixup: ${MIXUP_FEATDIR}
+
+imagenet200:
+  imglist:     ${IM200_IMGLIST}
+  resized:     ${IM200_RESIZED}
+  raw_val:     ${IM200_RAW_VAL}
+  ninco:       ${OOD_NINCO}
+  models_root: ${IM200_MODELS_ROOT}
+
+imagenet200_cells:
+  ce:       resnet18_full_ce_s0
+  ce_oe:    resnet18_full_ce_oe_s0
+  ls:       resnet18_full_ls_standard_a0.1_s0
+  ls_oe:    resnet18_full_ls_standard_a0.1_oe_s0
+
+cifar:
+  torchvision_root:     ${CIFAR_TORCHVISION_ROOT}
+  tin_train:            ${CIFAR_TIN_TRAIN}
+  cifar100_models_root: ${CIFAR100_MODELS_ROOT}

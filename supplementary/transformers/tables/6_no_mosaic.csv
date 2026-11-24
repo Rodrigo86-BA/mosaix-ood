@@ -1,0 +1,7 @@
+"condition (max-logit, no mosaic)",near,far
+"ResNet-50, 224 image",0.770282,0.894130
+"ResNet-50, image enlarged to 448",0.676617,0.756877
+"ViT-B/16, 224 image",0.700143,0.842727
+"ViT-B/16, 448, interpolated embedding",0.716205,0.874698
+"ViT-B/16, 448, periodic embedding",0.701245,0.836752
+"ViT-B/16, 448, smooth embedding",0.677456,0.802307

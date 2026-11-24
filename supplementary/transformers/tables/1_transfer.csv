@@ -1,0 +1,6 @@
+backbone,map,near,far
+ResNet-50 (CE),"CAM, layer4",0.727049,0.904038
+Swin-T,"Grad-CAM, centered",0.663755,0.757896
+Swin-T,"Grad-CAM, not centered",0.694753,0.778837
+ViT-B/16,"Grad-CAM, centered",0.610445,0.703965
+ViT-B/16,"Grad-CAM, not centered",0.605177,0.686248

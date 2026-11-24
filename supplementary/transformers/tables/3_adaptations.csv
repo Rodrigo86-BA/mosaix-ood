@@ -1,0 +1,10 @@
+backbone,score,input,near,far
+ResNet-50,max-logit,224 image,0.770282,0.894130
+ResNet-50,max-logit,112 image in a zeroed 224 canvas,0.695373,0.855852
+ResNet-50,s (mosaic),"224 tiles, 448 mosaic",0.741528,0.911320
+ResNet-50,s (mosaic),"112 tiles, 224 mosaic",0.676373,0.766879
+ViT-B/16,max-logit,224 image,0.700143,0.842727
+ViT-B/16,max-logit,112 image in a zeroed 224 canvas,0.691749,0.815665
+ViT-B/16,max-logit,"448 image, interpolated embedding",0.716206,0.874698
+ViT-B/16,s (mosaic),"224 tiles, 448 mosaic, interpolated embedding",0.569308,0.668323
+ViT-B/16,s (mosaic),"112 tiles, 224 mosaic",0.528890,0.599567
